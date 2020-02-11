@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista Tarefa</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarefa of tarefas | async">
+          <td>{{tarefa.descricao}}</td>
+          <td>{{tarefa.dataCriacao}}</td>
+          <td>{{tarefa.status}}</td>
+          <td><button (click)="deleteTarefa(tarefa.id)" class="btn btn-danger">Delete</button>
+              <button (click)="tarefaDetails(tarefa.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

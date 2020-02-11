@@ -1,0 +1,18 @@
+<h2>Tarefa Detalhes</h2> 
+
+<hr/>
+<div *ngIf="tarefa">
+  <div>
+    <label><b>Descricao: </b></label> {{tarefa.descricao}}
+  </div>
+  <div>
+    <label><b>Data Cricao: </b></label> {{tarefa.dataCriacao}}
+  </div>
+  <div>
+    <label><b>Status: </b></label> {{tarefa.status}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Volta para Lista de tarefas</button><br>

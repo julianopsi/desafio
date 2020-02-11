@@ -1,0 +1,25 @@
+<h3>Criar Tarefa</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="descricao">Descricao</label>
+      <input type="text" class="form-control" id="descricao" required [(ngModel)]="tarefa.descricao" name="descricao">
+    </div>
+
+    <div class="form-group">
+      <label for="name">DataCriacao</label>
+      <input type="text" class="form-control" id="dataCriacao" required [(ngModel)]="tarefa.dataCriacao" name="dataCriacao">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Status</label>
+      <input type="text" class="form-control" id="status" required [(ngModel)]="tarefa.status" name="status">
+    </div>
+
+    <button type="submit" class="btn btn-success">Gravar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <button class="btn btn-success" (click)="newTarefa()">Add</button>
+</div>
